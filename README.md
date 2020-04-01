@@ -102,4 +102,26 @@ It's hassle to run webpack every time. So you can start a webpack dev server. so
   ```
   Now when you run npm run start it will start the dev server and open your app in the browser.
 
+  # Use Less in the project
+  You need to do following changes to use less instead of simple CSS
+
+  ## Update webpack.config.js as follow
+
+  ```python
+  {test : /\.less$/, 
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'less-loader' }
+                ]
+            }
+
+```
+
+## Add styles.less inside app folder 
+
+Add path for styles.less in index.js as follow
+
+import './styles.less';
+
 
