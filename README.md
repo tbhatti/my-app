@@ -62,26 +62,44 @@ module.exports = {
     ]
 
 }
+```
+### In conjuction with out babel-loader works we have to add babel preset config to our package.json file
+
+```python
+"main": "index.js",
+"babel":{
+    "presets" : [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+  
+  ```
+  
+  ### To run the build we have to add webpack to our script tag in our package.json
+  
+  ```python
+  "main": "index.js",
+  "babel":{
+    "presets" : [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "create": "webpack"
+  },
+  ```
+So when i run npm run create from terminal it will run the webpack which will create the dist folder and our bundle file with index.html file.
+
+It's hassle to run webpack every time. So you can start a webpack dev server. so it will start build your code as soon as you run it. modify your script in package.json with following.
+
 ```python
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+"scripts": {
+    "start": "webpack-dev-server --open"
+  }
+  ```
+  Now when you run npm run start it will start the dev server and open your app in the browser.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
