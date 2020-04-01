@@ -3,12 +3,14 @@
 This project is created without using create-react-app
 
 ## Steps to create my-app from terminal
+```bash
  mkdir my-app
  cd my-app
  npm init -y
  npm install react react-dom
  mkdir app
  create index.js index.css inside app directory
+ ```
 
 ```python
 import React from 'react';
