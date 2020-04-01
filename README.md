@@ -34,6 +34,36 @@ To install all required dependency for these two run following command from your
 ```bash
 npm install --save-dev @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin
 ```
+### Webpack configurations
+
+Create webpack.config.js at root folder and paste following code into it
+
+```python
+var path = require('path');
+var HtmlWebpackPlugin =  require('html-webpack-plugin');
+
+module.exports = {
+    entry : './app/index.js',
+    output : {
+        path : path.resolve(__dirname , 'dist'),
+        filename: 'index_bundle.js'
+    },
+    module : {
+        rules : [
+            {test : /\.(js)$/, use:'babel-loader'},
+            {test : /\.css$/, use:['style-loader', 'css-loader']}
+        ]
+    },
+    mode:'development',
+    plugins : [
+        new HtmlWebpackPlugin ({
+            template : 'app/index.html'
+        })
+    ]
+
+}
+```python
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
