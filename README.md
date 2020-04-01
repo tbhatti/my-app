@@ -3,12 +3,12 @@
 This project is created without using create-react-app
 
 ## Steps to create my-app from terminal
-### mkdir my-app
-### cd my-app
-### npm init -y
-### npm install react react-dom
-### mkdir app
-### create index.js index.css inside app directory
+ mkdir my-app
+ cd my-app
+ npm init -y
+ npm install react react-dom
+ mkdir app
+ create index.js index.css inside app directory
 
 ```python
 import React from 'react';
@@ -24,6 +24,7 @@ class App extends React.Component{
 }
 
 ReactDOM.render(<App />, document.getElementById('app'))
+```
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
