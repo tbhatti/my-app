@@ -11,7 +11,7 @@ This project is created without using create-react-app
  mkdir app
  create index.js index.css inside app directory
  ```
-
+## Copy following code into my-app\app\index.js
 ```python
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -27,7 +27,13 @@ class App extends React.Component{
 
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
+So when you try to run this code in the browser it will give an error as the our code is written in JSX and browser does not understand it.
 
+So this is the point where Babel and Webpack comes into play.
+To install all required dependency for these two run following command from your terminal.
+```bash
+npm install --save-dev @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin
+```
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
