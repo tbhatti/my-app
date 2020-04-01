@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+/** Comment below line to import style.less
+ * import './index.css';**/
+import './styles.less';
 
 class App extends React.Component{
     render(){
