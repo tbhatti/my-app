@@ -1,29 +1,31 @@
-# React App
+# ReactApp
 
-Having webpack feature and less 
+This project is created without using create-react-app
 
-## Installation
+## Steps to create my-app
+### mkdir my-app
+### cd my-app
+### npm init -y
+### npm install react react-dom
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```bash
-pip install foobar
-```
+## Code scaffolding
 
-## Usage
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```python
-import foobar
+## Build
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Running unit tests
 
-Please make sure to update tests as appropriate.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
