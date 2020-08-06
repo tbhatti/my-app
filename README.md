@@ -104,7 +104,9 @@ It's hassle to run webpack every time. So you can start a webpack dev server. so
 
   # Use Less in the project
   You need to do following changes to use less instead of simple CSS
-
+  ```python
+  npm i less-loader
+  ```
   ## Update webpack.config.js as follow
 
   ```python
